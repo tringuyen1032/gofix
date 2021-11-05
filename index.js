@@ -38,6 +38,32 @@ app.get("/", async (req, res) => {
       });
 });
 
+app.get("/done", async (req, res) => {
+   var payload = {
+      notification: {
+         title: "Đã hoàn thành đơn.",
+         body: "Trần Đại Đen đã hoàn thành sửa chữa."
+      },
+      data: {
+         account: "Savings",
+         balance: "$3020.25"
+      }
+   };
+
+   var options = {
+      priority: "high",
+      timeToLive: 60 * 60 * 24
+   };
+
+   admin.messaging().sendToDevice(registrationTokenGoFix, payload, options)
+      .then(function (response) {
+         res.send(`Successfully sent message: ${response}`);
+      })
+      .catch(function (error) {
+         res.send(`Error sending message: ${error}`);
+      });
+});
+
 app.listen(port, () => {
    console.log(
       `Example app listening at http://localhost:${port}`
