@@ -4,6 +4,7 @@ const app = express();
 const port = 4000;
 const serviceAccount = require("./prm-project-c1964-firebase-adminsdk-aqqhk-064ce5a382.json");
 
+app.use(express.json())
 
 admin.initializeApp({
    credential: admin.credential.cert(serviceAccount),
@@ -12,7 +13,13 @@ admin.initializeApp({
 
 var registrationTokenGoFix = "f-9XcKtbTsqOejBG7TJ_4w:APA91bFiIqUrieC6e9L2X1QdhYdL_nongyoY0Lzqo4cUjHrzO38j0wo22nU_eYaWElwh9nZso0JkTO2o4_uBXi-QKimyctDxWcm10VIrTivIg8z0kK5FF1VgYn4azPgSp4oHXbvgUybm";
 
-app.get("/", async (req, res) => {
+app.post("/token", (req, res) => {
+   registrationTokenGoFix = req.body.token;
+   console.log(registrationTokenGoFix);
+} )
+
+app.get("/",  (req, res) => {
+   console.log('wtf');
    var payload = {
       notification: {
          title: "Đã có thợ nhận đơn.",
