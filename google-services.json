@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "529105558862",
+    "project_id": "gofix-mechanic-76e86",
+    "storage_bucket": "gofix-mechanic-76e86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529105558862:android:ffa0b3a7d03b6450ce521f",
+        "android_client_info": {
+          "package_name": "com.gofix_mechanic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529105558862-590djcnpfadop20jo958a1m35jfb1k4k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gofix_mechanic",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "529105558862-e87sh4h3lq68tcfc5t9n3vljdshsg0bm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj1G0pVVfNcwftvkaqpc3Yv7OGJo2BwY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529105558862-e87sh4h3lq68tcfc5t9n3vljdshsg0bm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
